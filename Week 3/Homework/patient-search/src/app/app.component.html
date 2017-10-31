@@ -1,0 +1,29 @@
+<app-search-text [searchText]="searchText"></app-search-text>
+<b><label for="searchText">Search:</label></b>
+<input name="searchText" [(ngModel)]="searchText">
+<br><br>
+<b><label for="searchType">Search Type:</label></b>
+<input type="radio" name="searchType" value="firstName" [(ngModel)]="searchType">First Name |
+<input type="radio" name="searchType" value="lastName" [(ngModel)]="searchType">Last Name |
+<input type="radio" name="searchType" value="emailAddress" [(ngModel)]="searchType">Email |
+<input type="radio" name="searchType" value="diagnosis" [(ngModel)]="searchType">Diagnosis |
+<input type="radio" name="searchType" value="doctorName" [(ngModel)]="searchType">Doctor
+<br><br>
+<table width="100%" border="solid">
+	<tr>
+		<th>Profile Image</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Diagnosis</th>
+		<th>Doctor</th>
+	</tr>
+	<tr *ngFor="let patient of search()" align="center">
+		<td><img width="100" height="100" src="{{ patient.profileImage }}"/></td>
+		<td>{{ patient.firstName }}</td>
+		<td>{{ patient.lastName }}</td>
+		<td>{{ patient.emailAddress }}</td>
+		<td>{{ patient.diagnosis }}</td>
+		<td>{{ patient.doctorName }}</td>
+	</tr>
+</table>
