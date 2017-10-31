@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="root-container">
+        <div class="header">
+            <button id="reverse"> 
+                REVERSE
+            </button>
+            <button id="remove-symbols-numbers"> 
+                REMOVE SYMBOLS & NUMBERS
+            </button>
+            <button id="sort-alphabetically"> 
+                SORT ALPHABETICALLLY
+            </button>
+            <button id="toggle-color"> 
+                TOGGLE COLOR
+            </button>
+            <button id="random-color"> 
+                RANDOM COLOR
+            </button>
+            <button id="convert-to-inline">
+                CONVERT TO INLINE
+            </button>
+            <button id="convert-to-block">
+                CONVERT TO BLOCK
+            </button>
+        </div>
+        <div class="main">
+            <div class="startups-container">
+
+            </div>
+
+        </div>
+        <div class="footer">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<style>
+    .root-container {
+        position: relative;
+    }
+
+    .root-container .header {
+        position: relative;
+    }
+
+    .root-container .main {
+        position: relative;
+    }
+
+    .root-container .footer {
+        position: relative;
+    }
+
+    .startups-container {
+        background-color: gray;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    .gold {
+        color: gold;
+    }
+</style>
+
+<script>
+    var colors = ['red', 'blue', 'gold'];
+    var chicagoStartupsHTML = [];
+    var chicagoStartups = [
+        '  Interior   Define  ',
+        'Classkick',
+        'teaBOT  .$',
+        'Pritzker Group Venture Capital',
+        'Teln!yx !!',
+        'ShipBob ~~$$$',
+        'Hologram',
+        'Tovala    ',
+        '    MANOR',
+        'ShuttleCloud 999987',
+        'gtrot @@@@@',
+        'DealsGoRound ****',
+        ' Groovebug',
+        'Stage$$$Bloc',
+        'Shiftgig',
+        'ParkWhiz'
+    ];
+    $(document).ready(function () {
+        $.each(chicagoStartups, function (index, startupName) {
+            chicagoStartupsHTML.push('<div>' + startupName + '</div>');
+        });
+        $(".startups-container").html(chicagoStartupsHTML.join(""));
+    });
+
+    //HOMEWORK 1 PROBLEMS START
+	var startups = $(".startups-container");
+	var color_index = -1;
+    // 1.CREATE A FUNCTION THAT REVERSES THE LIST OF STARTUPS ON CLICK OF THE REVERSE BUTTON
+	$("#reverse").click(function(){
+		startups.children().each(function(i,div){
+			startups.prepend(div)
+		});
+	});
+    // 2.CREATE A FUNCTION THAT REMOVES ALL SYMBOLS AND NUMBERS FROM COMPANY NAMES ON CLICK OF REMOVE SYMBOLS & NUMBERS BUTTON 
+    //   Stage$$$Bloc => StageBloc
+	$("#remove-symbols-numbers").click(function(){
+		startups.children().each(function(i,div){
+			div.innerHTML = div.innerHTML.replace(/[^a-zA-Z]/g,"");
+		});
+	});
+    // 3.CREATE A FUNCTION THAT SORTS STARTUPS IN ALPHABETICAL ORDER ON CLICK OF THE SORT BUTTON
+	$("#sort-alphabetically").click(function(){
+		items = [];
+		startups.children().each(function(i,div){
+			items.push(div.innerHTML);
+		});
+		
+		items.sort(function(a,b){
+			if (a.toLowerCase().trim() < b.toLowerCase().trim()) return -1;
+			if (a.toLowerCase().trim() > b.toLowerCase().trim()) return 1;
+			return 0;
+		});
+		
+		startups.children().each(function(i,div){
+			div.innerHTML = items[i];
+		});
+	});
+    // 4.CREATE A FUNCTION THAT TOGGLES THE BACKGROUND COLOR UPON CLICK OF THE TOGGLE COLOR BUTTON
+	$("#toggle-color").click(function(){
+		if(color_index == 2){
+			color_index = 0;
+		}
+		else{
+			color_index += 1;
+		}
+		color = colors[color_index];
+		startups.css("background-color", color);
+	});
+    // 5.CREATE A FUNCTION THAT RANDOMLY SELECTS A COLOR CLASS AND APPLIES IT TO EACH COMPANY NAME WHEN THE COLOR BUTTON IS CLICKED
+	$("#random-color").click(function(){
+		color = colors[Math.floor(Math.random() * 3)];
+		startups.children().removeClass();
+		startups.children().addClass(color);
+	});
+    // 6.CREATE A FUNCTION THAT DISPLAYS STARTUPS AS INLINE ELEMENTS ON CLICK OF CONVERT TO INLINE BUTTON
+	$("#convert-to-inline").click(function(){
+		startups.children().css("display", "inline");
+	});
+    // 7.CREATE A FUNCTION THAT DISPLAYS STARTUPS AS BLOCK ELEMENTS ON CLICK OF CONVERT TO BLOCK BUTTON
+	$("#convert-to-block").click(function(){
+		startups.children().css("display", "block");
+	});
+    //HOMEWORK 1 PROBLEMS END
+
+</script>

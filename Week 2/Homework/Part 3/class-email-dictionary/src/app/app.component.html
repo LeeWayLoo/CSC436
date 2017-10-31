@@ -1,0 +1,15 @@
+<h1>Classlist</h1>
+<div>
+	<ul>
+		<li *ngFor="let name of classListNames">{{ name }}</li>
+	</ul>
+</div>
+
+<h1>Email Search</h1>
+<div>
+	<label for="name">Name:</label>
+	<input name="name" [(ngModel)]="searchText" placeholder="Enter first and last name">
+	<button (click)="search()">Search</button>
+	<br><br>
+	<b>{{ searchResult }}</b>
+</div>
