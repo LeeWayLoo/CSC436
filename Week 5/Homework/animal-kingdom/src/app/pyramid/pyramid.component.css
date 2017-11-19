@@ -1,0 +1,17 @@
+table
+{
+	border-collapse: collapse;
+}
+
+tr
+{
+	border-style: solid;
+	border-color: black;
+	border-width: 0.25em;
+}
+
+td
+{
+	font-size: 2em;
+	padding: 3em;
+}

@@ -1,0 +1,6 @@
+<table align="center">
+	<tr *ngFor="let pyramidrow of pyramidrows" [ngStyle]="{'background-color':pyramidrow.color}">
+		<td>Level {{ pyramidrow.level }}</td>
+		<app-pyramid-row [animals]="pyramidrow.animals"></app-pyramid-row>
+	</tr>
+</table>
