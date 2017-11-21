@@ -1,0 +1,28 @@
+#navbar
+{
+	width: 100%;
+	background-color: black;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	text-align: center;
+}
+
+#navbar a
+{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	background-color: gray;
+	padding: 2em 10%;
+	margin: 0 5%;
+}
+
+#navbar a:hover
+{
+	background-color: darkgray;
+}
+
+#content
+{
+	text-align: center;
+}

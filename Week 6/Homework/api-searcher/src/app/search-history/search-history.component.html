@@ -1,0 +1,11 @@
+<h1>Search History</h1>
+<table align="center">
+	<tr>
+		<th>Timestamp</th>
+		<th>Search</th>
+	</tr>
+	<tr *ngFor="let search of service.getHistory()">
+		<td>{{ search.timestamp }}</td>
+		<td>{{ search.text }}</td>
+	</tr>
+</table>

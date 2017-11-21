@@ -1,0 +1,16 @@
+<input name="searchText" [(ngModel)]="searchText">
+<button (click)="searchApi()">
+	Search
+</button>
+
+<div *ngIf="currentText">
+	<h1>Results for "{{ currentText }}"</h1>
+	<ul>
+		<li *ngFor="let result of wService.getResults()">
+			{{ result }}
+		</li>
+	</ul>
+	<span *ngFor="let img of gService.getImages()">
+		<img src="{{ img }}"/>
+	</span>
+</div>
