@@ -1,0 +1,21 @@
+<div id="chatbox">
+	<div id="top">
+		Chatbox<button>X</button>
+	</div>
+	
+	<div id="content">
+		<ul>
+			<li *ngFor="let message of messages">
+				<img src="{{ message.user.profile }}"/>
+				<b>{{ message.user.name }}: </b>
+				{{ message.msg }}
+				<hr>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="message">
+		<input name="message" type="text" #message>
+		<button>Send</button>
+	</div>
+</div>

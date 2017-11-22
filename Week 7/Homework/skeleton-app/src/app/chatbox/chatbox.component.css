@@ -1,0 +1,81 @@
+#chatbox
+{
+	position: fixed;
+	bottom: 0em;
+	right: 1em;
+	border: 1px solid black;
+	width: 30em;
+	background-color: lightgray;
+	padding-bottom: 1em;
+}
+
+#top
+{
+	margin-bottom: 1em;
+	padding: 0.5em 1em;
+	background-color: black;
+	color: white;
+}
+
+#top button
+{
+	float:right;
+	background-color: red;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+
+#top button:hover
+{
+	cursor: pointer;
+	background: darkred;
+}
+
+#content
+{
+	height: 20em;
+	background-color: white;
+	border: 1px solid black;
+	margin: 0em 1em;
+	overflow-y: scroll;
+}
+
+#content img
+{
+	width: 10%;
+}
+
+#content ul
+{
+	list-style: none;
+}
+
+#content li
+{
+	padding-bottom: 1em;
+}
+
+#message
+{
+	margin: 1em 0em 0em 1em;
+}
+
+#message input
+{
+	width: 80%;
+}
+
+#message button
+{
+	border: none;
+	background-color: black;
+	color: white;
+	padding: 0.25em 0.75em;
+}
+
+#message button:hover
+{
+	cursor: pointer;
+	background: darkgray;
+}

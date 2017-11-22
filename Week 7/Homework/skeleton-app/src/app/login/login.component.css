@@ -1,0 +1,26 @@
+#form
+{
+	background-color: lightgreen;
+	width: 50em;
+	margin-top: 5em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em 0em;
+	border-radius: 5%;
+	border: 1px solid black;
+}
+
+#form .field
+{
+	margin: 1em 0em;
+}
+
+#form .field label
+{
+	font-weight: bold;
+}
+
+#form .field input
+{
+	width: 50%;
+}
