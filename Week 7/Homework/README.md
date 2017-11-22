@@ -15,6 +15,3 @@
 **Description:**  
 * Skeleton-App: A scaffolding of multiple components.
 * Weather-App: Displays the weather forecast of various locations.
-
-**Additions / Modifications:**
-* NA
