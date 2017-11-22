@@ -1,0 +1,30 @@
+*
+{
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight: bold;
+	color: white;
+}
+
+div
+{
+	background-color: maroon;
+	padding: 1em 0em;
+	cursor: default;
+}
+
+div span
+{
+	font-size: 3em;
+}
+
+div a
+{
+	text-decoration: none;
+	margin: 0em 1em;
+}
+
+div a:hover
+{
+	cursor: pointer;
+	color: pink;
+}

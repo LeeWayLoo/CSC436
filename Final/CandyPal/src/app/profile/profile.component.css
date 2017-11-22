@@ -1,0 +1,49 @@
+#form
+{
+	background-color: beige;
+	width: 40em;
+	margin: auto;
+	padding-top: 1em;
+	border: 1px solid black;
+	font-weight: bold;
+}
+
+#form button
+{
+	width: 100%;
+	border: none;
+	padding: 1em 0em;
+	margin-top: 1em;
+	border-top: 1px solid black;
+	font-size: 1em;
+	outline: none;
+}
+
+#form button:hover
+{
+	cursor:pointer;
+	background-color:lightgray;
+}
+
+.field
+{
+	padding: 1em;
+}
+
+.field label
+{
+	display: inline-block;
+	width: 10em;
+	text-align: right;
+	padding-right: 1em;
+}
+
+.field input
+{
+	width: 20em;
+}
+
+img
+{
+	width: 240px;
+}

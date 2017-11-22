@@ -1,0 +1,23 @@
+<h3>Edit Profile</h3>
+<div id="form">
+	<img src="{{ aService.account.profile }}"/>
+	<div class="field">
+		<label for="username">Username:</label>
+		<input name="username" type="text" value="{{ aService.account.usr}}" #username>
+	</div>
+	<div class="field">
+		<label for="password">Password:</label>
+		<input name="password" type="password" value="{{ aService.account.pwd }}" #password>
+	</div>
+	<div class="field">
+		<label for="email">Email:</label>
+		<input name="email" type="text" value="{{ aService.account.email }}" #email>
+	</div>
+	<div class="field">
+		<label for="profile">Profile Picture URL:</label>
+		<input name="profile" type="text" value="{{ aService.account.profile }}" #profile>
+	</div>
+	<button (click)="updateAccount(username,password,email,profile)">
+		UPDATE
+	</button>
+</div>

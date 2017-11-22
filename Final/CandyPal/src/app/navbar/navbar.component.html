@@ -1,0 +1,10 @@
+<div>
+	<span>CandyPal</span><br><br>
+	<a [routerLink]="['home']">Home</a>
+	<a *ngIf="!aService.authenticated" [routerLink]="['login']">Login</a>
+	<a *ngIf="!aService.authenticated" [routerLink]="['register']">Register</a>
+	<a *ngIf="aService.authenticated" [routerLink]="['scoreboard']">Scoreboard</a>
+	<a *ngIf="aService.authenticated" [routerLink]="['gallery']">Gallery</a>
+	<a *ngIf="aService.authenticated" [routerLink]="['profile']">Profile</a>
+	<a *ngIf="aService.authenticated" (click)="logout()">Logout</a>
+</div>

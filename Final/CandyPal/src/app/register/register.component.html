@@ -1,0 +1,22 @@
+<h3>Registration Form</h3>
+<div id="form">
+	<div class="field">
+		<label for="username">Username:</label>
+		<input name="username" type="text" #username>
+	</div>
+	<div class="field">
+		<label for="password">Password:</label>
+		<input name="password" type="password" #password>
+	</div>
+	<div class="field">
+		<label for="email">Email:</label>
+		<input name="email" type="text" #email>
+	</div>
+	<div class="field">
+		<label for="profile">Profile Picture URL:</label>
+		<input name="profile" type="text" #profile>
+	</div>
+	<button (click)="createAccount(username,password,email,profile)">
+		REGISTER
+	</button>
+</div>

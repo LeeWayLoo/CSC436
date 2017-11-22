@@ -1,0 +1,12 @@
+<table align="center">
+	<tr>
+		<th>Rank</th>
+		<th>Username</th>
+		<th>Candy</th>
+	</tr>
+	<tr *ngFor="let account of actService.sortAccounts(); let i = index">
+		<td>{{ i+1 }}</td>
+		<td>{{ account.usr }}</td>
+		<td>{{ account.candy }}</td>
+	</tr>
+</table>

@@ -1,0 +1,11 @@
+<div *ngIf="!aService.authenticated">
+	Welcome to CandyPal!<br>Register now and get 100 candies!
+	<br><br>
+	<iframe src="https://giphy.com/embed/EygI9LPMXMREc" width="240" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<div *ngIf="aService.authenticated">
+	<img src="{{ aService.account.profile }}"/>
+	<br><br>
+	Welcome {{ aService.account.usr }}!<br>Candy Inventory: {{ aService.account.candy }}
+</div>
